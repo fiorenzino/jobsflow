@@ -9,10 +9,10 @@
       "type": "SIMPLE",
       "startDelay": 0,
       "inputParameters": {
-        "vsomIP": "${workflow.input.VsomIP}",
-        "vsomName": "${workflow.input.VsomName}",
-        "customParam1":"${workflow.input.param1}",
-        "customParam2":"${workflow.input.param2}"
+        "vsomIP": "${workflow.input.vsomIP}",
+        "vsomName": "${workflow.input.vsomName}",
+        "customParam1":"${workflow.input.customParam1}",
+        "customParam2":"${workflow.input.customParam2}"
       }
     },
     {
@@ -21,11 +21,12 @@
       "type": "SIMPLE",
       "startDelay": 30,
       "inputParameters": {
-        "vsomIP": "${workflow.input.VsomIP}",
-        "vsomName": "${workflow.input.VsomName}",
-        "customParam1":"${workflow.input.param1}",
-        "customParam2":"${workflow.input.param2}"
+        "vsomIP": "${workflow.input.vsomIP}",
+        "vsomName": "${workflow.input.vsomName}",
+        "customParam1":"${workflow.input.customParam2}",
+        "customParam2":"${workflow.input.customParam2}"
       }
     }
-  ]
+  ],
+  "schemaVersion": 2
 }

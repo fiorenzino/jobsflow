@@ -22,9 +22,9 @@ public class SimpleServerListCameraList {
         app.startWorkflow(serverPort);
 
         // move this up later
-        //app.startPollingForTasks();
+        app.startPollingForTasks();
 
-        //app.waitForever();
+        app.waitForever();
 
 
 
