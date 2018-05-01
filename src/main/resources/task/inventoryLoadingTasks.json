@@ -1,0 +1,42 @@
+[
+  {
+    "name": "inventory.ServerList",
+    "label": "ServerList Task",
+    "description": "Get server lists from VSOM Server",
+    "retryCount": 3,
+    "timeoutSeconds": 1200,
+    "inputKeys": [
+      "input1",
+      "input2"
+    ],
+    "outputKeys": [
+      "output1",
+      "output2"
+
+    ],
+    "timeoutPolicy": "TIME_OUT_WF",
+    "retryLogic": "FIXED",
+    "retryDelaySeconds": 600,
+    "responseTimeoutSeconds": 3600
+  },
+  {
+    "name": "inventory.CameraList",
+    "label": "CameraList Task",
+    "description": "Get camera lists from VSOM Server",
+    "retryCount": 3,
+    "timeoutSeconds": 1200,
+    "inputKeys": [
+      "input1",
+      "input2"
+    ],
+    "outputKeys": [
+      "output1",
+      "output2"
+
+    ],
+    "timeoutPolicy": "TIME_OUT_WF",
+    "retryLogic": "FIXED",
+    "retryDelaySeconds": 600,
+    "responseTimeoutSeconds": 3600
+  }
+]

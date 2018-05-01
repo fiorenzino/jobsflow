@@ -1,0 +1,31 @@
+{
+  "name": "inventoryDataLoader",
+  "description": "This  will get server and Locations list from a given VSOM",
+  "version": 1,
+  "tasks": [
+    {
+      "name": "inventory.ServerList",
+      "taskReferenceName": "inventory.ServerList",
+      "type": "SIMPLE",
+      "startDelay": 0,
+      "inputParameters": {
+        "vsomIP": "${workflow.input.VsomIP}",
+        "vsomName": "${workflow.input.VsomName}",
+        "customParam1":"${workflow.input.param1}",
+        "customParam2":"${workflow.input.param2}"
+      }
+    },
+    {
+      "name": "inventory.CameraList",
+      "taskReferenceName": "inventory.CameraList",
+      "type": "SIMPLE",
+      "startDelay": 30,
+      "inputParameters": {
+        "vsomIP": "${workflow.input.VsomIP}",
+        "vsomName": "${workflow.input.VsomName}",
+        "customParam1":"${workflow.input.param1}",
+        "customParam2":"${workflow.input.param2}"
+      }
+    }
+  ]
+}

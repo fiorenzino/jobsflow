@@ -1,0 +1,17 @@
+group 'com.cisco.conductor'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile  'com.netflix.conductor:conductor-client:1.8.8'
+    compile  'com.netflix.conductor:conductor-common:1.8.8'
+}
