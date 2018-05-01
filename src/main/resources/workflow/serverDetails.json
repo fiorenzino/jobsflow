@@ -1,0 +1,39 @@
+{
+  "name": "serverDetailsLoader",
+  "description": "This  will get server and Locations list from a given VSOM",
+  "version": 1,
+  "tasks": [
+    {
+      "name": "inventory.ServerList",
+      "taskReferenceName": "inventory_ServerList",
+      "type": "SIMPLE",
+      "startDelay": 0,
+      "inputParameters": {
+        "vsomIP": "${workflow.input.vsomIP}",
+        "vsomName": "${workflow.input.vsomName}",
+        "customParam1":"${workflow.input.customParam1}",
+        "customParam2":"${workflow.input.customParam2}"
+      }
+    },
+    {
+      "name": "inventory.ServerDetails",
+      "taskReferenceName": "inventory_ServerDetails",
+      "type": "FORK_JOIN_DYNAMIC",
+      "startDelay": 30,
+      "inputParameters": {
+        "dynamicTasks": "${inventory_ServerList.output.dynamicTasks}",
+        "inputs": "${inventory_ServerList.output.inputs}"
+      },
+      "dynamicForkTasksParam": "dynamicTasks",
+      "dynamicForkTasksInputParamName": "inputs"
+    },
+    {
+      "name": "dynamic_join",
+      "taskReferenceName": "join1",
+      "type": "JOIN",
+      "startDelay": 0
+    }
+
+  ],
+  "schemaVersion": 2
+}
