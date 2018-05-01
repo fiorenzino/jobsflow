@@ -5,7 +5,7 @@
   "tasks": [
     {
       "name": "inventory.ServerList",
-      "taskReferenceName": "inventory.ServerList",
+      "taskReferenceName": "inventory_ServerList",
       "type": "SIMPLE",
       "startDelay": 0,
       "inputParameters": {
@@ -17,14 +17,15 @@
     },
     {
       "name": "inventory.CameraList",
-      "taskReferenceName": "inventory.CameraList",
+      "taskReferenceName": "inventory_CameraList",
       "type": "SIMPLE",
       "startDelay": 30,
       "inputParameters": {
         "vsomIP": "${workflow.input.vsomIP}",
         "vsomName": "${workflow.input.vsomName}",
         "customParam1":"${workflow.input.customParam2}",
-        "customParam2":"${workflow.input.customParam2}"
+        "customParam2":"${workflow.input.customParam2}",
+        "slInput1":"${inventory_ServerList.output.outputKey1}"
       }
     }
   ],
