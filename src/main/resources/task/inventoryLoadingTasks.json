@@ -20,9 +20,9 @@
     "responseTimeoutSeconds": 3600
   },
   {
-    "name": "inventory.ServerDetails",
+    "name": "inventory.FanServerDetails",
     "label": "Server details",
-    "description": "Get server details VSOM Server",
+    "description": "Fan server details",
     "retryCount": 3,
     "timeoutSeconds": 1200,
     "inputKeys": [
@@ -40,9 +40,9 @@
     "responseTimeoutSeconds": 3600
   },
   {
-    "name": "encode_task1",
-    "label": "encode task1",
-    "description": "encode task1",
+    "name": "inventory.ServerDetails",
+    "label": "Server Details",
+    "description": "Server Details",
     "retryCount": 3,
     "timeoutSeconds": 1200,
     "inputKeys": [

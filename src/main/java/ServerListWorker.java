@@ -31,13 +31,13 @@ public class ServerListWorker implements Worker {
 
         Map<String,Object> mymap = new HashMap<String, Object>();
 
-        for(int i=0;i<30;i++){
+        for(int i=0;i<4;i++){
             CustomTask t1 = new CustomTask();
-            t1.setName("encode_task1");
-            t1.setTaskReferenceName("forked_task"+i);
+            t1.setName("inventory.ServerDetails");
+            t1.setTaskReferenceName("inventory_ServerDetails"+i);
             t1.setType(WorkflowTask.Type.SIMPLE.toString());
 
-            mymap.put("forked_task"+i,mymap1);
+            mymap.put("inventory_ServerDetails"+i,mymap1);
 
             dynamiclist.add(t1);
         }

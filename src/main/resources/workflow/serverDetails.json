@@ -16,8 +16,8 @@
       }
     },
     {
-      "name": "inventory.ServerDetails",
-      "taskReferenceName": "inventory_ServerDetails",
+      "name": "inventory.FanServerDetails",
+      "taskReferenceName": "inventory_FanServerDetails",
       "type": "FORK_JOIN_DYNAMIC",
       "startDelay": 30,
       "inputParameters": {
