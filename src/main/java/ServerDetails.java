@@ -102,9 +102,10 @@ public class ServerDetails {
 
         CameraListWorker cameraListWorker = new CameraListWorker();
         ServerListWorker serverListWorker = new ServerListWorker();
+        ServerDetailsWorker serverDetailsWorker = new ServerDetailsWorker();
 
         WorkflowTaskCoordinator coordinator = new WorkflowTaskCoordinator.Builder()
-                .withWorkers(cameraListWorker, serverListWorker)
+                .withWorkers(cameraListWorker, serverListWorker, serverDetailsWorker)
                 .withThreadCount(100)
                 .withWorkerQueueSize(400)
                 .withSleepWhenRetry(100)
